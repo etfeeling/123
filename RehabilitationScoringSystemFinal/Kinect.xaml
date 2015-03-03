@@ -1,0 +1,34 @@
+﻿<Window x:Class="RehabilitationScoringSystemFinal.Kinect"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Kinect" Height="700" Width="800" Loaded="Window_Loaded">
+<Canvas Height="480" Name="canvas1" Width="640" HorizontalAlignment="Left" VerticalAlignment="Top" OpacityMask="Black">
+    <Image Name="colorImage"/>
+        <Ellipse Canvas.Left="746" Canvas.Top="0" Height="30" Name="Head" Stroke="{x:Null}" Width="30" Fill="#FF003AFF" />
+        <Ellipse Canvas.Left="756" Canvas.Top="7" Height="20" Name="HandRight" Stroke="{x:Null}" Width="20" Fill="Red" />
+        <TextBox Canvas.Left="47" Canvas.Top="484" Height="21" Name="text_distance" Width="54" />
+        <Label Canvas.Left="15" Canvas.Top="481" Content="D:" Height="28" Name="label2" />
+        <TextBox Canvas.Left="0" Canvas.Top="0" Height="27" Name="text_starttime" Width="57" OpacityMask="{x:Null}" Foreground="Blue" BorderBrush="#FFE50000" Text="START" FontSize="16" />
+        <TextBox Canvas.Left="47" Canvas.Top="506" Height="23" Name="text_time" Width="54" Text="0.1" />
+        <Label Canvas.Left="17" Canvas.Top="506" Content="T:" Height="28" Name="label1" />
+        <TextBox Canvas.Left="259" Canvas.Top="491" Height="170" Name="text_standard" Width="56" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" />
+        <TextBox Canvas.Left="330" Canvas.Top="491" Height="170" Name="text_self" Width="48" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" />
+        <TextBox Canvas.Left="0" Canvas.Top="39" Height="27" Name="text_waittime" Width="62" Text="wait" OpacityMask="{x:Null}" Foreground="Black" BorderBrush="Blue" Background="{x:Null}" FontSize="16" />
+        <Button Canvas.Left="665" Canvas.Top="126" Content="軌跡校正" Height="23" Name="RepeatInterpolation" Width="75" Click="RepeatInterpolation_Click" />
+        <TextBox Canvas.Left="463" Canvas.Top="490" Height="169" Name="textBox1" Width="52" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" />
+        <TextBox Canvas.Left="520" Canvas.Top="490" Height="169" Name="text_scorelist" Width="120" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" />
+        <TextBox Canvas.Left="47" Canvas.Top="573" Height="66" Name="text_score" Width="112" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled" />
+        <Label Canvas.Left="0" Canvas.Top="573" Content="Score:" Height="28" Name="label3" />
+        <Button Canvas.Left="665" Canvas.Top="43" Content="骨架正規化" Height="23" Name="SkeletonNormalize" Width="71" Click="SkeletonNormalize_Click" />
+        <Button Canvas.Left="665" Canvas.Top="169" Content="DTW SC" Height="23" Name="DtwSlotC" Width="58" Click="DtwSlotC_Click" />
+        <TextBox Canvas.Left="665" Canvas.Top="198" Height="23" Name="text_slbt" Width="50" Text="1" />
+        <TextBox Canvas.Left="656" Canvas.Top="361" Height="154" Name="text_timeprint" Width="120" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" />
+        <Button Canvas.Left="646" Canvas.Top="282" Content="繼續" Height="23" Name="button1" Width="75" Click="button1_Click" />
+        <RadioButton Canvas.Left="661" Canvas.Top="72" Content="是" Height="16" Name="check_yes" IsChecked="True" />
+        <RadioButton Canvas.Left="708" Canvas.Top="72" Content="否" Height="16" Name="check_no" IsChecked="False" />
+        <Label Canvas.Left="149" Canvas.Top="0" Content="速度" Height="49" Name="lab_show" Width="112" FontSize="25" FontWeight="Bold" Foreground="#FFFF1A1A" />
+        <Ellipse Canvas.Left="687" Canvas.Top="10" Fill="Red" Height="20" Name="KneeRight" Stroke="{x:Null}" Width="20" />
+        <TextBox Canvas.Left="47" Canvas.Top="535" Height="32" Name="text_key" Width="92" />
+        <Label Canvas.Left="4" Canvas.Top="533" Content="KEY:" Height="28" Name="label4" />
+    </Canvas>
+</Window>
